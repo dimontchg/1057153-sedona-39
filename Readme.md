@@ -2,6 +2,7 @@
 
 - Студент: [Дмитрий Рощиненко](https://up.htmlacademy.ru/htmlcss/39/user/1057153).
 - Наставник: [Кекс].
+- Сайт: [Мой прект Седона](https://dimontchg.github.io/1057153-sedona-39/)
 
 ---
 
