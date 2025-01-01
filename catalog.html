@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Седона. Гостиницы<</title>
-        <!--  -->
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
         <header class="page-header">
@@ -42,8 +42,7 @@
         </header>
 
         <main class="main-inner">
-            <header class="inner-header">
-                <!-- Надо ли оборачивать в header -->
+            <div class="main-inner-header">
                 <h1 class="inner-header-title">Гостиницы Седоны</h1>
                 <ol class="breadcrumbs">
                     <li class="breadcrumbs-item">
@@ -55,82 +54,82 @@
                         <a class="breadcrumbs-link" href="#">Гостиницы</a>
                     </li>
                 </ol>
-            </header>
 
-            <section class="filters">
-                <h2 class="visually-hidden">Фильтры</h2>
-                <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                    <fieldset class="catalog-filter-group">
-                        <legend class="catalog-filter-title">Инфраструктура:</legend>
-                        <ul class="catalog-filter-list">
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="control-input" type="checkbox" name="pool" checked/>Бассейн
-                                    <!-- Надо ли оборачивать Бассейн в <span> (<span class="control-label">Бассейн</span>)??? -->
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="control-input" type="checkbox" name="parking" checked/>Парковка
-                                    <!-- Надо ли оборачивать Парковка в <span> (<span class="control-label">Парковка</span>)??? -->
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="control-input" type="checkbox" name="wifi"/>Wi-Fi
-                                    <!-- Надо ли оборачивать Wi-Fi в <span> (<span class="control-label">Wi-Fi</span>)??? -->
-                                </label>
-                            </li>
-                        </ul>
-                    </fieldset>
+                <section class="filters">
+                    <h2 class="visually-hidden">Фильтры</h2>
+                    <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+                        <fieldset class="catalog-filter-group">
+                            <legend class="catalog-filter-title">Инфраструктура:</legend>
+                            <ul class="catalog-filter-list">
+                                <li class="catalog-filter-item">
+                                    <label class="control">
+                                        <input class="control-input" type="checkbox" name="pool" checked/>
+                                        <span class="control-label">Бассейн</span>
+                                    </label>
+                                </li>
+                                <li class="catalog-filter-item">
+                                    <label class="control">
+                                        <input class="control-input" type="checkbox" name="parking" checked/>
+                                        <span class="control-label">Парковка</span>
+                                    </label>
+                                </li>
+                                <li class="catalog-filter-item">
+                                    <label class="control">
+                                        <input class="control-input" type="checkbox" name="wifi"/>
+                                        <span class="control-label">Wi-Fi</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
 
-                    <fieldset class="catalog-filter-group">
-                        <legend class="catalog-filter-title">Тип жилья:</legend>
-                        <ul class="catalog-filter-list">
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="control-input" type="radio" name="housing-type" value="hotel" checked/>Гостиница
-                                    <!-- Надо ли оборачивать Гостиница в <span> (<span class="control-label">Гостиница</span>)??? -->
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="control-input" type="radio" name="housing-type" value="motel"/>Мотель
-                                    <!-- Надо ли оборачивать Мотель в <span> (<span class="control-label">Мотель</span>)??? -->
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="control-input" type="radio" name="housing-type" value="apartments"/>Апартаменты
-                                    <!-- Надо ли оборачивать Апартаменты в <span> (<span class="control-label">Апартаменты</span>)??? -->
-                                </label>
-                            </li>
-                        </ul>
-                    </fieldset>
+                        <fieldset class="catalog-filter-group">
+                            <legend class="catalog-filter-title">Тип жилья:</legend>
+                            <ul class="catalog-filter-list">
+                                <li class="catalog-filter-item">
+                                    <label class="control">
+                                        <input class="control-input" type="radio" name="housing-type" value="hotel" checked/>
+                                        <span class="control-label">Гостиница</span>
+                                    </label>
+                                </li>
+                                <li class="catalog-filter-item">
+                                    <label class="control">
+                                        <input class="control-input" type="radio" name="housing-type" value="motel"/>
+                                        <span class="control-label">Мотель</span>
+                                    </label>
+                                </li>
+                                <li class="catalog-filter-item">
+                                    <label class="control">
+                                        <input class="control-input" type="radio" name="housing-type" value="apartments"/>
+                                        <span class="control-label">Апартаменты</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
 
-                    <fieldset class="catalog-filter-group">
-                        <legend class="catalog-filter-title">
-                            Стоимость, ₽:
-                        </legend>
-                        <label class="catalog-filter-label">
-                            <span class="range-input-label">от</span>
-                            <input class="range-input range-input-min" type="number" value="0" name="min-price">
-                        </label>
-                        <label class="catalog-filter-label">
-                            <span class="range-input-label">до</span>
-                            <input class="range-input range-input-max" type="number" value="9000" name="max-price" />
-                        </label>
-                        <button class="range-toggle toggle-min" type="button">
-                            <span class="visually-hidden">Изменить минимальную стоимость</span>
-                        </button>
-                        <button class="range-toggle toggle-max" type="button">
-                            <span class="visually-hidden">Изменить максимальную стоимость</span>
-                        </button>
-                    </fieldset>
-                    <button class="catalog-filter-submit" type="submit">Применить</button>
-                    <button class="catalog-filter-reset" type="reset">Сбросить</button>
-                </form>
-            </section>
+                        <fieldset class="catalog-filter-group">
+                            <legend class="catalog-filter-title">
+                                Стоимость, ₽:
+                            </legend>
+                            <label class="catalog-filter-label">
+                                <span class="range-input-label">от</span>
+                                <input class="range-input range-input-min" type="number" value="0" name="min-price">
+                            </label>
+                            <label class="catalog-filter-label">
+                                <span class="range-input-label">до</span>
+                                <input class="range-input range-input-max" type="number" value="9000" name="max-price" />
+                            </label>
+                            <button class="range-toggle toggle-min" type="button">
+                                <span class="visually-hidden">Изменить минимальную стоимость</span>
+                            </button>
+                            <button class="range-toggle toggle-max" type="button">
+                                <span class="visually-hidden">Изменить максимальную стоимость</span>
+                            </button>
+                        </fieldset>
+                        <button class="catalog-filter-submit" type="submit">Применить</button>
+                        <button class="catalog-filter-reset" type="reset">Сбросить</button>
+                    </form>
+                </section>
+            </div>
 
             <section class="catalog-products">
                 <h2 class="catalog-products-title">
@@ -141,9 +140,9 @@
                     <option value="cheap">Сначала дешёвые</option>
                     <option value="expensive">Сначала дорогие</option>
                 </select>
-                <ul class="view-button">
+                <ul class="view-buttons">
                     <li class="view-button-item">
-                        <a class="view-button view-button-card" href="#">
+                        <a class="view-button view-button-current view-button-tile" href="#">
                             <span class="visually-hidden">Показать плиткой</span>
                         </a>
                     </li>
@@ -153,7 +152,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="view-button view-button-card" href="#">
+                        <a class="view-button view-button-list" href="#">
                             <span class="visually-hidden">Показать список</span>
                         </a>
                     </li>
@@ -187,7 +186,7 @@
                         <p class="product-card-tipe">Гостиница</p>
                         <p class="product-card-price">От 5000 ₽</p>
                         <a class="product-card-button" href="#">Подробнее</a>
-                        <a class="add-favorite-button" href="#">В избранное</a>
+                        <a class="favorite-button" href="#">В избранном</a>
                         <p class="product-card-stars product-card-stars-4">
                             <span class="visually-hidden">4 звезды</span>
                         </p>
