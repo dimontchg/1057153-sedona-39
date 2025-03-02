@@ -75,6 +75,19 @@ body {
     z-index: 1;
 }
 
+.navigation-logo:hover {
+    opacity: 0.6;
+}
+
+.navigation-logo:focus-visible {
+    opacity: 0.6;
+    outline-offset: -2px;
+}
+
+.navigation-logo:active {
+    opacity: 0.3;
+}
+
 .page-header-logo {
     display: block;
 }
@@ -100,6 +113,22 @@ body {
     font-weight: 700;
     color: #000000;
     text-decoration: none;
+}
+
+.navigation-link:hover {
+    /* background-color: rgba(131, 179, 211, 0.2); */
+    color: #756157;
+}
+
+.navigation-link:focus-visible {
+    /* background-color: rgba(131, 179, 211, 0.2); */
+    color: #756157;
+    outline-offset: -2px;
+}
+
+.navigation-link:active {
+    /* background-color: rgba(131, 179, 211, 0.2); */
+    color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-link-current {
@@ -134,8 +163,8 @@ body {
     position: relative;
     display: block;
     padding: 22px 12px;
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
@@ -143,30 +172,44 @@ body {
     text-decoration: none;
 }
 
-.navigation-user-link-search {
-    background-image: url("../images/search.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.navigation-user-link:hover,
+.navigation-user-link:active {
+    /* background-color: rgba(131, 179, 211, 0.2); */
 }
 
-.navigation-user-link-favorite {
-    background-image: url("../images/favorite.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.navigation-user-link:hover .navigation-user-icon,
+.navigation-user-link:focus-visible .navigation-user-icon {
+    fill: #756157;
 }
 
-/* Вопросы по св-вам: overflow: hidden; height: 20px; min-width: 20px; max-width: 3ch; */
+.navigation-user-link:focus-visible {
+    /* background-color: rgba(131, 179, 211, 0.2); */
+    outline-offset: -2px;
+}
+
+.navigation-user-link:active .navigation-user-icon {
+    fill: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-user-icon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
 .favorite-icon {
     position: absolute;
     top: 10px;
-    right: 5px;
+    left: 20px;
+    min-width: 20px;
     font-size: 10px;
     font-weight: 400;
     line-height: 10px;
     text-align: center;
     color: #ffffff;
     background-color: #7DB54F;
-    border-radius: 50%;
+    border-radius: 100vw;
+    box-sizing: border-box;
     padding: 5px 4px;
 }
 
@@ -188,10 +231,7 @@ body {
     cursor: pointer;
 }
 
-.header-button:hover {
-    background-color: #615048;
-}
-
+.header-button:hover,
 .header-button:focus-visible {
     background-color: #615048;
 }
@@ -292,7 +332,6 @@ body {
 .advantages-item-container::before {
     content: "";
     margin-bottom: 30px;
-    order: 2;
     width: 60px;
     height: 2px;
     background-color: rgba(0, 0, 0, 0.3);
@@ -307,6 +346,7 @@ body {
     line-height: 28px;
     text-transform: uppercase;
     text-align: center;
+    order: -1;
 }
 
 .advantages-description {
@@ -314,7 +354,6 @@ body {
     margin-bottom: 0;
     text-align: center;
     color: #333333;
-    order: 3;
 }
 
 .advantages-img {
@@ -461,10 +500,7 @@ body {
     cursor: pointer;
 }
 
-.search-button:hover {
-    background-color: #615048;
-}
-
+.search-button:hover,
 .search-button:focus-visible {
     background-color: #615048;
 }
@@ -550,10 +586,7 @@ body {
     cursor: pointer;
 }
 
-.subscribe-button:hover {
-    background-color: #68A2CA;
-}
-
+.subscribe-button:hover,
 .subscribe-button:focus-visible {
     background-color: #68A2CA;
 }
@@ -600,23 +633,20 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 47px;
-    height: 40px;
+    min-width: 47px;
+    min-height: 40px;
     color: #82B3D3;
     text-decoration: none;
     box-sizing: border-box;
 }
 
-.footer-social-link:hover {
-    color: #68A2CA;
+.footer-social-link:hover .footer-social-img,
+.footer-social-link:focus-visible .footer-social-img {
+    fill: #68A2CA;
 }
 
-.footer-social-link:focus-visible {
-    color: #68A2CA;
-}
-
-.footer-social-link:active {
-    color: rgba(104, 162, 202, 0.3);
+.footer-social-link:active .footer-social-img {
+    fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-phone {
@@ -631,10 +661,7 @@ body {
     text-align: center;
 }
 
-.footer-phone:hover {
-    color: #756157;
-}
-
+.footer-phone:hover,
 .footer-phone:focus-visible {
     color: #756157;
 }
@@ -648,16 +675,13 @@ body {
     color: #000000;
 }
 
-.copyright:hover {
-    color: #756157;
+.copyright:hover .copyright-img,
+.copyright:focus-visible .copyright-img {
+    fill: #756157;
 }
 
-.copyright:focus-visible {
-    color: #756157;
-}
-
-.copyright:active {
-    color: rgba(117, 97, 87, 0.3);
+.copyright:active .copyright-img {
+    fill: rgba(117, 97, 87, 0.3);
 }
 
 /* =============================page-footer============================= */
@@ -698,7 +722,6 @@ body {
 }
 
 .breadcrumbs-item {
-    position: relative;
     display: flex;
     align-items: center;
 }
@@ -706,20 +729,20 @@ body {
 /* Мой вариант */
 .breadcrumbs-item::after {
     content: "";
-    position: absolute;
-    top: 6px;
-    left: 22px;
+    display: block;
+    margin: 0 10px;
     width: 8px;
     height: 11px;
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .breadcrumbs-item:last-child::after {
     content: none;
 }
 
-/* Вариант sedona-38 (без margin-right: 28px; у .breadcrumbs-link) */
+/* Вариант sedona-38  */
 /* .breadcrumbs-item:not(:last-child)::after {
     width: 8px;
     height: 11px;
@@ -732,7 +755,6 @@ body {
 } */
 
 .breadcrumbs-link {
-    margin-right: 28px;
     font-size: 16px;
     line-height: 21px;
     color: #ffffff;
@@ -1073,6 +1095,15 @@ body {
 .product-card-title-link {
     grid-column: 1 / -1;
     text-decoration: none;
+}
+
+.product-card-title-link:hover .product-card-title,
+.product-card-title-link:focus-visible .product-card-title {
+    color: #756157;
+}
+
+.product-card-title-link:active .product-card-title {
+    color: rgba(117, 97, 87, 0.3);
 }
 
 .product-card-title {
